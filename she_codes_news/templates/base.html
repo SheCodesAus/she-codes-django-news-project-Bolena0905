@@ -1,13 +1,15 @@
 <!doctype html>
+{% load static %}
 
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <title>She Codes News</title>
         <meta name="description" content="">
-        <meta name="author" content="Hayley van Waas">
+        <meta name="author" content="Ana Bolena Gomez Gordillo">
         <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="">
+        <link rel="stylesheet" type="text/css" href="{% static'styles.css' %}">
+        {% endblock %}
     </head>
 
     <body>
@@ -19,6 +21,8 @@
             </div>
             <!-- include nav here -->
         </header>
+
+        {% block content %}{% endblock %}
 
         <!-- content blocks here -->
     </body>
