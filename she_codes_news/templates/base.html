@@ -8,8 +8,8 @@
         <meta name="description" content="">
         <meta name="author" content="Ana Bolena Gomez Gordillo">
         <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="{% static'styles.css' %}">
-        {% endblock %}
+        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+        
     </head>
 
     <body>
@@ -19,11 +19,15 @@
                     <h1>She {Codes} News</h1>
                 </a>
             </div>
-            <!-- include nav here -->
+            {% include './nav.html' %}
+            
         </header>
 
-        {% block content %}{% endblock %}
 
-        <!-- content blocks here -->
+
+        
+
+        {% block content %}{% endblock %}
+        
     </body>
 </html>
