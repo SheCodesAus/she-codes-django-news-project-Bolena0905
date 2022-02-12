@@ -14,7 +14,7 @@
             {% for story in latest_stories %}
                 {% include "./storyCard.html" with story=story position=forloop.counter %}
 
-                <p>{{ story.title }}</p>
+            
             {% endfor %}
         {% else %}
             <p>No stories are available.</p>
@@ -26,7 +26,7 @@
             {% for story in all_stories %}
                 {% include "./storyCard.html" with story=story %}
 
-                <p>{{ story.title }}</p>
+            
             {% endfor %}
         {% else %}
             <p>No stories are available.</p>
@@ -34,3 +34,6 @@
     </div>
 
 {% endblock %}
+
+
+<a href="{% url 'news:newStory' %}"> Write New Story</a>

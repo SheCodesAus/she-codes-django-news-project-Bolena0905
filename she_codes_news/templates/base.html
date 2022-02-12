@@ -1,5 +1,7 @@
-<!doctype html>
 {% load static %}
+
+<!doctype html>
+
 
 <html lang="en">
     <head>
@@ -9,7 +11,7 @@
         <meta name="author" content="Ana Bolena Gomez Gordillo">
         <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-        
+        {% block stylesheets %}{% endblock %}
     </head>
 
     <body>
