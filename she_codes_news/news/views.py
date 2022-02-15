@@ -1,3 +1,5 @@
+from multiprocessing import context
+from unicodedata import category
 from django.forms import ModelChoiceField
 from django.views import generic
 from django.urls import reverse_lazy
@@ -49,3 +51,18 @@ class StoryDeleteView(DeleteView):
     model = NewsStory
     success_url = reverse_lazy('news:index')
 
+
+
+class CategoryView(generic.ListView):
+    model= NewsStory
+    Template_name = 'news/category.html'
+    context_object_name ='stories'
+
+    def get_queryset(self):
+        self.category = self.kwargs['category']
+        return NewsStory.objects.filter(category=self.category).order_by('pub_date')
+
+    def get_context_data(self, **kwargs):
+        context =super().get_context_data(**kwargs)
+        context['category'] = self.category
+        return context

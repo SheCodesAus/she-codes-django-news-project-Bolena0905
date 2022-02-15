@@ -27,11 +27,3 @@ class ProfileView(generic.DetailView):
         return context
     def get_object(self):
         return self.request.user
-
-from datetime import datetime
-datetime.strptime('2014-12-04', '%Y-%m-%d').date()
-
-# class CategoryView(generic.ListView)
-
-
-
