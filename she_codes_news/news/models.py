@@ -7,3 +7,7 @@ class NewsStory(models.Model):
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     pub_date = models.DateTimeField()
     content = models.TextField()
+    image = models.URLField(blank=True, null=True)
+
+    # class Meta:
+    #     ordering = ('-pub_date',)
