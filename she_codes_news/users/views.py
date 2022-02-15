@@ -1,5 +1,3 @@
-from msilib.schema import Class
-from statistics import mode
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
 from django.views import generic
