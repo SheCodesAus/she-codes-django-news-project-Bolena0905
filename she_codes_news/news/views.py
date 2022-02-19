@@ -30,7 +30,7 @@ class StoryView(generic.DetailView):
     template_name = 'news/story.html'
     context_object_name = 'story'
 
-class AddStoryView(generic.CreateView):
+class AddStoryView(mixins.LoginRequiredMixin, generic.CreateView):
     form_class = StoryForm
     context_object_name = 'storyForm'
     template_name = 'news/createStory.html'
@@ -55,14 +55,10 @@ class StoryDeleteView(DeleteView):
 
 class CategoryView(generic.ListView):
     model= NewsStory
-    Template_name = 'news/category.html'
+    template_name = 'news/category.html'
     context_object_name ='stories'
 
     def get_queryset(self):
-        self.category = self.kwargs['category']
+        self.category = self.kwargs['pk']
         return NewsStory.objects.filter(category=self.category).order_by('pub_date')
 
-    def get_context_data(self, **kwargs):
-        context =super().get_context_data(**kwargs)
-        context['category'] = self.category
-        return context

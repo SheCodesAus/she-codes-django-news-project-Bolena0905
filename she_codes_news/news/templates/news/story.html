@@ -11,6 +11,7 @@
 <div id="story-wrapper">
     <h2>{{ story.title }}</h2>
     <h4>{{ story.author }}</h4>
+    <h5>{{ story.category }}</h5>
     <div id="story-content">
         <img src="{% static '/news/images/placeholder-5.jpg' %}">
         {{ story.content|linebreaks }}

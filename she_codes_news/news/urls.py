@@ -8,6 +8,7 @@ urlpatterns = [
     path('<int:pk>/', views.StoryView.as_view(), name='story'),
     path('<int:pk>/delete', views.StoryDeleteView.as_view(), name='delete'),
     path('add-story/', views.AddStoryView.as_view(), name='newStory'),
+    path('category/<str:pk>', views.CategoryView.as_view(), name= 'category')
     
     
 

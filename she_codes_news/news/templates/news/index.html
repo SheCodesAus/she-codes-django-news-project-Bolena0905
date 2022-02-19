@@ -11,7 +11,7 @@
     {% if request.user.is_authenticated %}
         <a href="{% url 'news:newStory' %}" id="write-new-stroy">Write New Story</a> 
     {% else %}    
-        <button id="sign_up">Become an author today</button>
+        <a href="{% url 'users:createAccount' %}" id="sign_up">Become an author today</a> 
     {% endif %} 
     
     <h2>Latest News</h2>
