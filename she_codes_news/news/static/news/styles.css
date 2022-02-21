@@ -1,12 +1,15 @@
 .story-card {
     margin: 2px;
-    border: 1px solid #000;
+    border: 1px solid rgb(253, 154, 25);
+    background-color: rgba(195, 142, 245, 0.267);
+    border-radius: 20px;
     /* padding: 5px; */
 }
 
 .story-card img {
     width: 100%;
     height: 300px;
+    border-radius: 20px;
     object-fit: cover;
 }
 
