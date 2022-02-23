@@ -1,12 +1,15 @@
 .story-card {
     margin: 2px;
-    border: 1px solid #000;
-    padding: 5px;
+    border: 1px solid rgb(253, 154, 25);
+    background-color: rgba(195, 142, 245, 0.267);
+    border-radius: 20px;
+    /* padding: 5px; */
 }
 
 .story-card img {
     width: 100%;
     height: 300px;
+    border-radius: 20px;
     object-fit: cover;
 }
 
@@ -16,7 +19,7 @@
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1px 1px;
     grid-template-areas: "left-1 right-1" "left-1 right-2" "left-1 right-3";
-    max-height: 500px;
+    /* max-height: 570px; */
 }
 
 #story-card-1 {
@@ -60,7 +63,7 @@
 #story-card-3 img,
 #story-card-4 img {
     width: 33%;
-    height: 100%;
+    height: 30%;
     margin-right: 5px;
 }
 
@@ -84,3 +87,28 @@
     margin: 0 0 10px 10px;
     width: 50%;
 }
+
+#write-new-story {
+    background-color: rgb(253, 154, 25);
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    
+    
+}
+
+
+form { 
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: initial;
+    background-color: blueviolet;
+    float: inherit;
+    padding: 40px 3em 33px 2em;
+    margin: 150px;
+    border-radius: 50px;
+    
+}
+

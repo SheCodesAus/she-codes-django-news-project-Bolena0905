@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+
+<div>
+    <p> This is the author page</p>
+    <h4>{{ author.username }}</h4>
+    <p>{{ author.email }}</p>
+    <p> Author information</p>
+
+</div>
+
+<div id="user-stories">
+    {% if all_stories %}
+        {% for story in all_stories %}
+            {% include "news/storyCard.html" with story=story %}
+
+        
+        {% endfor %}
+    {% else %}
+        <p>No stories are available.</p>
+    {% endif %}
+</div>
+
+
+
+{% endblock %}
